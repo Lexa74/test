@@ -1,106 +1,268 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
-  <meta charset="utf-8" />
-  <title></title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.styl" />
 </head>
+<script src="./script.js"></script>
+
 <body>
 
-<header>Заголовок страницы</header>
-
-<nav>Меню навигации</nav>
-
-<aside><img src="./src/image/icon.svg" alt=""></aside>
-
-<article>
-    <div class="first-screen">
-        <div class="wrapper">
-            <div class="first-screen__content">
-                <h1 class="first-screen__caption">New Automation Tool for Your Home</h1>
-                <p class="first-screen__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere 
-                    sollicitudin odio tellus elit.</p>
-                <button class="first-screen__button btn_blue-light">See Our Project</button>
-            </div>
-            
+    <header>
+        <div class="wrapper-header">
+            <a href="/" class="logo">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_0_1648)">
+                    <circle cx="16" cy="24" r="16" fill="#316099"/>
+                    <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2"/>
+                    <path d="M39.3 30L34.38 16H30.96L26.06 30H29.04L29.88 27.48H35.46L36.3 30H39.3ZM32.68 19.18L34.6 24.9H30.76L32.68 19.18Z" fill="#316099"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_0_1648">
+                    <rect width="48" height="48" fill="white" transform="matrix(1 0 0 -1 0 48)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <div class="navigation-header">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 24H28V21.3333H4V24ZM4 17.3333H28V14.6667H4V17.3333ZM4 8V10.6667H28V8H4Z" fill="#356EAD"/>
+                </svg>
+            </div>   
         </div>
-        <div class="first-screen-image-bg"></div>
-    </div>
-    <div class="second-screen">
-        <div class="wrapper">
-            <div class="second-screen__content content-second">
-                <h1 class="content-second__caption-second">What we do to help
-                    our client grow in
-                    digital era,</h1>
-                <div class="content-second__items">
-                    <div class="content-second__item">
-                        <div class="content-second__item-image content-second__item-image_man">
-                            <img src="./src/image/second-page1.png" alt="">
-                        </div>
-                        <div class="content-second__item-caption">
-                            <span>Make Your business To Be
-                            Better Famous In Internet</span>
-                        </div>
-                        <div class="content-second__item-description">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                        <div class="content-second__item-more">
-                            <span>Learn more</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#5A98D0"/>
-                                </svg>                                
-                        </div>
-                    </div>  
+    </header>
+
+    <nav></nav>
+
+    <aside></aside>
+
+    <article>
+        
+        <div class="modal-window active">
+            <form action="" class="modal-window_form">
+                <div class="modal-window__content">
+                    <h1 class="modal-window__content_caption">
+                       SEND US MESSAGE
+                    </h1>
+                    <p class="modal-window__content_p">Full Name</p>
+                    <input class="modal-window__content_input" type="text" placeholder="Your Name" name="name">
+                    <p class="modal-window__content_p">Email</p>
+                    <input class="modal-window__content_input" type="text" placeholder="Your Email" name="email">
+                    <p class="modal-window__content_p">Message</p>
+                    <textarea class="modal-window__content_textarea" type="text" placeholder="Your message" name="message"></textarea>
+                    <button class="modal-window__content_button">SUBMIT</button>
                 </div>
-                <div class="content-second__items">
-                    <div class="content-second__item">
-                        <div class="content-second__item-image content-second__item-image_grandma">
-                            <img src="./src/image/second-page3.png" alt="">
-                        </div>
-                        <div class="content-second__item-caption content-second__item-caption_grandma">
-                            <span>Make Your business To Be
-                            Better Famous In Internet</span>
-                        </div>
-                        <div class="content-second__item-description">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                        <div class="content-second__item-more">
-                            <span>Learn more</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#5A98D0"/>
-                                </svg>                                
-                        </div>
-                    </div>  
-                    <div class="content-second__item">
-                        <div class="content-second__item-image content-second__item-image_woman">
-                            <img src="./src/image/second-page2.png" alt="">
-                        </div>
-                        <div class="content-second__item-caption">
-                            <span>Make Your business To Be
-                            Better Famous In Internet</span>
-                        </div>
-                        <div class="content-second__item-description">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                        <div class="content-second__item-more">
-                            <span>Learn more</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#5A98D0"/>
-                                </svg>                                
-                        </div>
-                    </div>  
+            </form>
+            <div class="layout"></div>
+        </div>
+        <div class="first-screen">
+            <div class="wrapper">
+                <div class="first-screen__content">
+                    <h1 class="first-screen__caption">New Automation Tool for Your Home</h1>
+                    <p class="first-screen__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere
+                        sollicitudin odio tellus elit.</p>
+                    <button class="first-screen__button btn_blue-light">See Our Project</button>
                 </div>
+
+            </div>
+            <div class="first-screen-image-bg"></div>
+        </div>
+        <div class="second-screen">
+            <div class="wrapper">
+                <div class="second-screen__content content-second">
+                    <h1 class="content-second__caption-second">What we do to help
+                        our client grow in
+                        digital era,</h1>
+                    <div class="content-second__items">
+                        <div class="content-second__item">
+                            <div class="content-second__item-image content-second__item-image_man">
+                                <img src="./src/image/second-page1.png" alt="">
+                            </div>
+                            <div class="content-second__item-caption">
+                                <span>Make Your business To Be
+                                    Better Famous In Internet</span>
+                            </div>
+                            <div class="content-second__item-description">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                            </div>
+                            <div class="content-second__item-more">
+                                <span>Learn more</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
+                                        fill="#5A98D0" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-second__items">
+                        <div class="content-second__item">
+                            <div class="content-second__item-image content-second__item-image_grandma">
+                                <img src="./src/image/second-page3.png" alt="">
+                            </div>
+                            <div class="content-second__item-caption content-second__item-caption_grandma">
+                                <span>Make Your business To Be
+                                    Better Famous In Internet</span>
+                            </div>
+                            <div class="content-second__item-description">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                            </div>
+                            <div class="content-second__item-more">
+                                <span>Learn more</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
+                                        fill="#5A98D0" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content-second__item">
+                            <div class="content-second__item-image content-second__item-image_woman">
+                                <img src="./src/image/second-page2.png" alt="">
+                            </div>
+                            <div class="content-second__item-caption">
+                                <span>Make Your business To Be
+                                    Better Famous In Internet</span>
+                            </div>
+                            <div class="content-second__item-description">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                            </div>
+                            <div class="content-second__item-more">
+                                <span>Learn more</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
+                                        fill="#5A98D0" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</article>
+        </div>
+    </article>
 
-<footer>Подвал сайта</footer>
- 
+    <footer>
+        
+        <div class="third-screen">
+            <div class="wrapper">
+                <div class="third-screen__description-third-block description-third-block">
+                    <h1 class="description-third-block__caption-third">Our Beloved Client</h1>
+                    <span class="description-third-block__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                         ad minim veniam.</span>
+                </div>
+                <div class="third-screen__content-third content-third">
+                    <div class="content-third__items">
+                        <div class="content-third__item_top content-third__item">
+                            <span>logo client 1</span>
+                        </div>
+                        <div class="content-third__item_top content-third__item">
+                            <span>logo client 2</span>
+                        </div>
+                        <div class="content-third__item_top content-third__item">
+                            <span>logo client 3</span>
+                        </div>
+                        <div class="content-third__item_top content-third__item">
+                            <span>logo client 4</span>
+                        </div>
+                    </div>
+                    <div class="content-third__items">
+                        <div class="content-third__item_bottom content-third__item">
+                            <span>logo client 5</span>
+                        </div>
+                        <div class="content-third__item_bottom content-third__item">
+                            <span>logo client 6</span>
+                        </div>
+                        <div class="content-third__item_bottom content-third__item">
+                            <span>logo client 7</span>
+                        </div>
+                        <div class="content-third__item_bottom content-third__item">
+                            <span>logo client 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper_background">
+            <div class="fourth-screen">
+                <div class="wrapper">
+                    <div class="fourth-screen__content">
+                        <div class="fourth-screen__content_text-fourth content_text-fourth">
+                            <h1 class="content_text-fourth__caption-fourth">Intersted to woek
+                                with our team?</h1>
+                            <span class="content_text-fourth__description-fourth">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam.
+                            </span>
+                        </div>
+                        <div class="fourth-screen__content-button">
+                            <button class="fourth-screen__content-button_open-modal open-modal btn_blue-light">
+                                Let's talk
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-line"></div>
+            <div class="fifth-screen">
+                <div class="wrapper">
+                    <div class="fifth-creen_wrapper">
+                        <div class="fifth-screen__left-column left-column-fifth">
+                            <div class="left-column-fifth__inside-caption">
+                                <svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#98C3E8"/>
+                                    <circle cx="32" cy="16" r="15" fill="white" stroke="#316099" stroke-width="2"/>
+                                    <path d="M38.3 23L33.38 9H29.96L25.06 23H28.04L28.88 20.48H34.46L35.3 23H38.3ZM31.68 12.18L33.6 17.9H29.76L31.68 12.18Z" fill="#316099"/>
+                                </svg>
+                                <h1 class="left-column-fifth__inside-caption_h1">Afrianska</h1>
+                            </div>
+                            <div class="left-column-fifth__info-about">
+                                <strong>A.</strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                            <div class="left-column-fifth__info-about">
+                                <strong>Т.</strong><span>+62-812-7313-4321</span>
+                            </div>
+                            <div class="left-column-fifth__info-about">
+                                <strong>Е.</strong><span>hello.afrian@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="fifth-screen__right-column">
+                            <div class="fifth-screen__right-column_inside-elem inside-elem-fifth-screen">
+                                <h2 class="inside-elem-fifth-screen_h2">About US</h2>
+                                <p class="inside-elem-fifth-screen_p">About</p>
+                                <p class="inside-elem-fifth-screen_p">What We Do</p>
+                                <p class="inside-elem-fifth-screen_p">Project</p>
+                                <p class="inside-elem-fifth-screen_p">How It Work With Us</p>
+                            </div>
+                            <div class="fifth-screen__right-column_inside-elem">
+                                <h2 class="inside-elem-fifth-screen_h2">Follow US</h2>
+                                <p class="inside-elem-fifth-screen_p">Instagram</p>
+                                <p class="inside-elem-fifth-screen_p">Facebook</p>
+                                <p class="inside-elem-fifth-screen_p">LinkedIn</p>
+                                <p class="inside-elem-fifth-screen_p">Youtube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="wrapper">
+                    <span class="copyright_span">2019 © Afrianska. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

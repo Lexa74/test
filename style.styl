@@ -1,182 +1,411 @@
-:root {
-    --colorDark: #1F3F68;
-    --colorLight: #5A98D0;
-    --colorPreDark: #316099;
-}
+ :root  
+    --colorDark  #1F3F68 
+    --colorLight  #5A98D0 
+    --colorPreDark  #316099 
+ 
 
-* {
-    box-sizing: border-box;
-}
+*  
+    box-sizing  border-box 
+ 
 
-@font-face {
-    font-family: Gallient;
-    src: url('./src/fonts/Gallient.ttf');
-}
+@font-face  
+    font-family  Gallient 
+    src  url('./src/fonts/Gallient.ttf') 
+ 
 
-@font-face {
-    font-family: Gilroy;
-    src: url('./src/fonts/Gilroy-Light.otf');
-}
+@font-face  
+    font-family  Gilroy 
+    src  url('./src/fonts/Gilroy-Light.otf') 
+ 
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Gilroy;
-    font-size: 16px;
-    color: var(--colorDark);
-}
+body  
+    margin  0 
+    padding  0 
+    box-sizing  border-box 
+    font-family  Gilroy 
+    font-size  16px 
+    color  var(--colorDark) 
+ 
+.modal-window_form
+    display flex
+    justify-content center
+    align-items: center
+    height 100%
 
+.modal-window
+    opacity 0
+    width 100%
+    height 100vh
+    z-index 0
+    line-height 30px
+    letter-spacing 0.04em
+    position fixed
+    left 0
+    top 0
+    
+    &.active 
+        opacity 1
+        z-index 2
 
-.first-screen {
-    background: linear-gradient(0deg, #daeeff, rgba(152, 195, 232, 0) 31.12%);
-    height: 100vh;
-    width: 100%;
-    position: relative;
-}
+    &__content
+        width 540px
+        height 800px
+        background white
+        padding 56px
+        box-shadow 5px 10px 50px rgba(16, 112, 177, 0.2)
+        border-radius 10px
+        &_caption
+            margin-top 0
+            margin-bottom 48px
+        
+        &_p 
+            margin-top 0
+            margin-bottom 8px
+        
+        &_input
+            padding 21px 42px
+            margin-bottom 32px
+            border 1px solid #356EAD
+            border-radius 10px
+            width 428px
+        
+        &_textarea
+            width 428px
+            height 144px
+            margin-bottom 72px
+            border 1px solid #356EAD
+            border-radius 10px
+            padding 21px 42px
+            resize none
+        
+        &_button
+            width 428px
+            height 72px
+            background  var(--colorLight) 
+            box-shadow  5px 10px 20px rgba(53, 110, 173, 0.2) 
+            border-radius  8px 
+            color  white 
+            padding  10px 
+            cursor  pointer 
+            border  none 
+            font-size  16px 
 
-.wrapper {
-    width: 940px;
-    margin: 0 auto;
-    position: relative;
-}
+.layout 
+    opacity 0
+    width 100%
+    height 100vh
+    z-index 0
+    background: rgba(0, 0, 0, .3)
+    position absolute
+    left 0
+    top 0
+    transition: .35s all
 
-.first-screen__content {
-    width: 690px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-}
+.modal-window.active .layout 
+    opacity 1
+    z-index -1
 
-.first-screen__caption {
-    font-size: 74px;
-    line-height: 74px;
-    letter-spacing: 0.04em;
-    font-family: Galient;
-    margin-bottom: 32px;
-    margin-top: 0;
-}
+.modal-window.active body 
+    overflow hidden
+    
+.modal-window.active .modal-window_form
+    z-index 3
 
-.first-screen__text {
-    margin-bottom: 71px;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    opacity: 0.6;
-    width: 425px;
-}
+.wrapper  
+    width  940px 
+    margin  0 auto 
+    position  relative 
+ 
+.wrapper-header
+    margin 48px auto 48px auto 
+    width 1200px
+    display flex
+    justify-content space-between
+    align-items center
 
-.btn_blue-light {
-    background: var(--colorLight);
-    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-    border-radius: 8px;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-    width: 220px;
-    height: 56px;
-}
+.navigator-header 
+    cursor pointer
 
-.first-screen-image-bg {
-    background-image: url(./src/image/illustration_firstScreen.png);
-    background-repeat: no-repeat;
-    background-position: 96% 50%;
-    background-size: 35%;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
+.btn_blue-light  
+    background  var(--colorLight) 
+    box-shadow  5px 10px 20px rgba(53, 110, 173, 0.2) 
+    border-radius  8px 
+    color  white 
+    padding  10px 
+    cursor  pointer 
+    border  none 
+    font-size  16px 
+    width  220px 
+    height  56px 
+ 
 
-.second-screen__content {
-    margin: 28vh 0;
-}
+.first-screen 
+    background  linear-gradient(0deg, #daeeff, rgba(152, 195, 232, 0) 31.12%) 
+    height  100vh 
+    width  100% 
+    position  relative 
+
+    &__content 
+        width  690px 
+        display  flex 
+        flex-direction  column 
+        height  100vh 
+        justify-content  center 
+    
+    &__caption 
+        font-size  74px 
+        line-height  74px 
+        letter-spacing  0.04em 
+        font-family  Galient 
+        margin-bottom  32px 
+        margin-top  0 
+
+    &__text 
+        margin-bottom  71px 
+        font-size  16px 
+        line-height  26px 
+        letter-spacing  0.05em 
+        opacity  0.6 
+        width  425px 
+
+    &-image-bg  
+        background-image  url(./src/image/illustration_firstScreen.png) 
+        background-repeat  no-repeat 
+        background-position  96% 50% 
+        background-size  35% 
+        height  100vh 
+        width  100% 
+        position  absolute 
+        top  0 
+        z-index  -1 
+ 
 
 /* Блок 2 */
-.content-second {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    gap: 100px;
-}
+.second-screen__content  
+    margin  212px 0 
+ 
 
-.content-second__caption-second {
-    width: 358px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--colorPreDark);
-    font-size: 36px;
-    line-height: 46px;
-    margin: 0;  
-}
+.content-second  
+    display  flex 
+    justify-content  center 
+    position  relative 
+    gap  100px 
 
-.content-second__items {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-}
+    &__caption-second 
+        width  358px 
+        position  absolute 
+        left  0 
+        top  0 
+        color  var(--colorPreDark) 
+        font-size  36px 
+        line-height  46px 
+        margin  0 
 
-.content-second__item {
-    display: flex;
-    flex-direction: column;
-    padding: 48px;
-    background: #FFFFFF;
-    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
-    width: 380px;
-    position: relative;
-}
+    &__items 
+        display  flex 
+        justify-content  center 
+        flex-direction  column 
+        gap  100px 
+        align-items  center 
 
-.content-second__item-image {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 56px;
-}
+    &__item 
+        display  flex 
+        flex-direction  column 
+        padding  48px 
+        background  #FFFFFF 
+        box-shadow  5px 20px 50px rgba(16, 112, 177, 0.2) 
+        border-radius  10px 
+        width  380px 
+        position  relative 
 
-.content-second__item-image_man {
-    position: relative;
-    left: -22px;
-}
+    &__item-image 
+        display  flex 
+        justify-content  center 
+        margin-bottom  56px 
+        &_man 
+            position  relative 
+            left  -22px 
+        &_grandma 
+            position  absolute 
+            top  -20px 
+            left  68px 
+        &_woman 
+            position  relative 
+            left  -22px 
+    &__item-caption 
+        font-size  20px 
+        line-height  30px 
+        letter-spacing  0.05em 
+        font-weight  bold 
+        margin-bottom  16px 
 
-.content-second__item-image_grandma {
-    position: absolute;
-    top: -20px;
-    left: 68px;
-}
+        &_grandma 
+            padding-top  190px 
+    
+    &__item-description 
+        opacity  .6 
+        margin-bottom  32px 
 
-.content-second__item-image_woman {
-    position: relative;
-    left: -22px;
-}
+    &__item-more 
+        color  var(--colorLight) 
+        display  flex 
+        align-items  center 
+        gap  28px 
+        cursor  pointer 
+ 
+/* Блок 3 Footer */
 
-.content-second__item-caption {
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.05em;
-    font-weight: bold;
-    margin-bottom: 16px;
-}
+footer 
+    background var(--colorLight)
+    border-radius 200px 0px 0px 0px
+    color white
 
-.content-second__item-caption_grandma {
-    padding-top: 190px;
-}
+.third-screen 
+        padding 96px 0 125px 0
+        &__description-third-block 
+            display flex
+            gap 97px
+            justify-content flex-start
+       
+    .description-third-block 
+        &__caption-third
+            font-size 36px
+            line-height 46px
+            letter-spacing 0.05em
+            margin 0
+            width 300px
+        
+        &__description 
+            opacity .6
+            width 500px
+            
+    &__content-third
+        display flex
 
-.content-second__item-description {
-    opacity: .6;
-    margin-bottom: 32px;
-}
+    .content-third 
+        margin-top 111px
 
-.content-second__item-more {
-    color: var(--colorLight);
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    cursor: pointer;
-}
+        &__items 
+            display flex
+            font-size: 20px;
+            line-height: 46px;
+            letter-spacing: 0.02em;
+            width 940px
+            justify-content center
+
+
+        &__item 
+            display flex
+            align-items center
+            justify-content center
+            text-align center
+            border-right 1px solid #fff
+            width 235px
+            height 128px
+            position relative
+            cursor pointer
+
+            &:hover::after 
+                z-index 1
+                opacity 1
+
+            &:last-child 
+                border-right none
+
+            &::after
+                content 'More client'
+                display flex
+                justify-content center
+                align-items center
+                position absolute
+                width 100%
+                height 100%
+                top 0  
+                left 0
+                z-index 0
+                opacity 0
+                background var(--colorPreDark)
+
+        &__item_top 
+            border-bottom 1px solid #fff
+
+
+/* Блок 4 */          
+.wrapper_background 
+    background-image  url('./src/image/4screen_bg.png')
+    width 100%
+    height 100%
+    background-size 95%
+    background-repeat no-repeat
+
+.fourth-screen__content 
+    padding 91px 0 96px 0
+    display flex
+    align-items center
+    gap 180px
+
+.content_text-fourth 
+
+    &__caption-fourth
+        font-size 36px
+        line-height 46px
+        letter-spacing 0.05em
+        margin-top 0
+        margin-bottom 32px
+        width 350px
+    
+    &__description-fourth 
+        width 500px
+        opacity .6
+
+.footer-line
+    border 1px solid #fff
+    width 80%
+    opacity .6
+
+.fifth-screen
+    padding-top 97px
+
+    &__right-column
+        display flex
+        gap 77px
+
+.fifth-creen_wrapper 
+     display flex
+     gap 100px
+
+.left-column-fifth 
+    width 300px
+
+    &__inside-caption
+        display flex
+        gap 15px
+        align-items center
+        margin-bottom 33px
+
+        &_h1 
+            margin 0
+    
+    &__info-about 
+        display flex
+        gap 16px
+        margin-bottom 24px
+        &:last-child
+            margin 0
+
+.inside-elem-fifth-screen 
+    &_h2
+        margin-top 0
+        margin-bottom 32px
+    
+    &_p 
+        margin-top 0
+        margin-bottom 16px
+        &:last-child
+            margin 0
+
+.copyright
+    opacity .6
+    line-height 26px
+    letter-spacing 0.05em
+    padding 64px 0
