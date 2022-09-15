@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <title></title>
     <link rel="stylesheet" href="style.styl" />
+    <script src="./script.js"></script>
 </head>
-<script src="./script.js"></script>
+
 
 <body>
 
@@ -40,22 +41,30 @@
 
     <article>
         
-        <div class="modal-window active">
+        <div class="modal-window">
             <form action="" class="modal-window_form">
                 <div class="modal-window__content">
                     <h1 class="modal-window__content_caption">
                        SEND US MESSAGE
                     </h1>
                     <p class="modal-window__content_p">Full Name</p>
-                    <input class="modal-window__content_input" type="text" placeholder="Your Name" name="name">
+                    <input class="modal-window__content_input input-send-name" type="text" placeholder="Your Name" name="name">
                     <p class="modal-window__content_p">Email</p>
-                    <input class="modal-window__content_input" type="text" placeholder="Your Email" name="email">
+                    <input class="modal-window__content_input input-send-email" type="text" placeholder="Your Email" name="email">
                     <p class="modal-window__content_p">Message</p>
-                    <textarea class="modal-window__content_textarea" type="text" placeholder="Your message" name="message"></textarea>
-                    <button class="modal-window__content_button">SUBMIT</button>
+                    <textarea class="modal-window__content_textarea input-send-textarea" type="text" placeholder="Your message" name="message"></textarea>
+                    <button class="modal-window__content_button send-data">SUBMIT</button>
                 </div>
             </form>
-            <div class="layout"></div>
+            <div class="layout close-modal"></div>
+        </div>
+        <div class="modal-window">
+            <form action="" class="modal-window_form modal-window_form_succssefull">
+                <div class="modal-window__content modal-window__content_succssefull-window">
+                    <p class="succssefull-text">Your message successfully sent</p>
+                </div>
+            </form>
+            <div class="layout close-modal"></div>
         </div>
         <div class="first-screen">
             <div class="wrapper">

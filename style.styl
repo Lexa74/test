@@ -17,6 +17,11 @@
     font-family  Gilroy 
     src  url('./src/fonts/Gilroy-Light.otf') 
  
+header  
+    position sticky
+    top 20px
+    z-index 1
+
 
 body  
     margin  0 
@@ -25,18 +30,32 @@ body
     font-family  Gilroy 
     font-size  16px 
     color  var(--colorDark) 
+
+    &.active
+        overflow hidden
  
+.succssefull-text 
+    text-align center
+
+
 .modal-window_form
-    display flex
-    justify-content center
-    align-items: center
-    height 100%
+    width 540px
+    height 800px
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    margin auto
+
+    &_succssefull
+        height 200px
 
 .modal-window
     opacity 0
     width 100%
     height 100vh
-    z-index 0
+    z-index -1
     line-height 30px
     letter-spacing 0.04em
     position fixed
@@ -68,6 +87,10 @@ body
             border 1px solid #356EAD
             border-radius 10px
             width 428px
+
+        &_input, &_textarea 
+            &.error 
+                border-color: red
         
         &_textarea
             width 428px
@@ -82,24 +105,28 @@ body
             width 428px
             height 72px
             background  var(--colorLight) 
-            box-shadow  5px 10px 20px rgba(53, 110, 173, 0.2) 
+            box-shadow 5px 20px 50px rgba(16, 112, 177, 0.2)
             border-radius  8px 
             color  white 
             padding  10px 
             cursor  pointer 
             border  none 
             font-size  16px 
+        
+        &_succssefull-window 
+            height 200px
 
 .layout 
     opacity 0
     width 100%
     height 100vh
-    z-index 0
+    z-index -1
     background: rgba(0, 0, 0, .3)
     position absolute
     left 0
     top 0
     transition: .35s all
+    cursor pointer
 
 .modal-window.active .layout 
     opacity 1
@@ -118,7 +145,8 @@ body
  
 .wrapper-header
     margin 48px auto 48px auto 
-    width 1200px
+    max-width 1200px
+    width 95%
     display flex
     justify-content space-between
     align-items center
@@ -409,3 +437,17 @@ footer
     line-height 26px
     letter-spacing 0.05em
     padding 64px 0
+
+@media screen and (min-width 300px) and (max-width 980px)
+    .wrapper_background
+        background: var(--colorPreDark)
+    footer
+        border-radius 0
+    .content-second 
+        flex-direction column
+
+    .content-second__caption-second
+        width auto
+        position static
+        text-align center
+
